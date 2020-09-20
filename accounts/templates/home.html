@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center><strong><h2>Admin Panel</h2></strong></center>
+<h2><p>Welcome to College Admin,</h2> <strong>{% if user.is_authenticated %}{{ user.username }}{% else %}Guest of Admin{% endif %}!</strong></p>
+<p> This College Admin Portal for the Admin of College that Contain the information of student and staffs all the data included in that Portal.</p>
+
+<strong>College Admin Panel</strong>
+<ul>
+  <li>Student List</li>
+  <br>
+  <li>Staff List</li>
+  <br>
+  <li>Result</li>
+  <br>
+  <li>Add New Student</li>
+  <br>
+  <li>Add New Staff</li>
+  <br>
+  <li>Add New Result</li>
+  <br>
+
+</ul>
+
+
+ <form class="form-inline my-2 my-lg-0">
+            <a href="{% url 'login' %}" class="btn btn-primary ml-10">Admin Login</a><hr>
+            <a href="{% url 'signup' %}" class="btn btn-primary ml-10">Admin Sign up</a>
+</div>
+
+  </p>
+
+
+{% endblock %}
+
+
